@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>新增数据</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- <form method="get"> -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>课程名称</th>
+                <th>总报名人数</th>
+                <th>今日增加人数</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>前端全栈工程师精英班</td>
+                <td>
+                    <input type="text" name="allfeNum" id="number-one">
+                </td>
+                <td>
+                    <input type="text" name="allfeAdd" id="add-one">
+                </td>
+            </tr>
+            <tr>
+                <td>精英前端工程师预读班</td>
+                <td>
+                    <input type="text" name="readyNum" id="number-two">
+                </td>
+                <td>
+                    <input type="text" name="readyAdd" id="add-two">
+                </td>
+            </tr>
+            <tr>
+                <td>0基础轻松学</td>
+                <td>
+                    <input type="text" name="zeroNum" id="number-three">
+                </td>
+                <td>
+                    <input type="text" name="zeroAdd" id="add-three">
+                </td>
+            </tr>
+            <tr>
+                <td>免费课程</td>
+                <td>
+                    <input type="text" name="freeNum" id="number-four">
+                </td>
+                <td>
+                    <input type="text" name="freeAdd" id="add-four"> </td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-success" id="submit-button">点击添加</button>
+    <script src="https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+    // 给按钮添加点击事件，通过ajax发送数据
+    $('#submit-button').click(function(e) {
+        // 阻止按钮默认事件
+        e.preventDefault();
+        $.ajax({
+            url: 'http://localhost:3000/index/add',
+            type: "get",
+            dataType: "json",
+            data: {
+                "allfeNum": $('#number-one').val(),
+                "allfeAdd": $('#add-one').val(),
+                "readyNum": $('#number-two').val(),
+                "readyAdd": $('#add-two').val(),
+                "zeroNum": $('#number-three').val(),
+                "zeroAdd": $('#add-three').val(),
+                "freeNum": $('#number-four').val(),
+                "freeAdd": $('#add-four').val(),
+            },
+            success: function(result) {
+                // console.log('we get the data');
+                //定义传输成功后打开的界面（展示界面）
+                window.open('http://localhost:3000/views/index')
+            },
+            //出现错误信息时候，便于排查
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            },
+        })
+    })
+    </script>
+</body>
+
+</html>
