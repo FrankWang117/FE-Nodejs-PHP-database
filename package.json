@@ -1,0 +1,20 @@
+{
+  "name": "fetobe",
+  "version": "1.0.0",
+  "description": "一个连通前端到后端整个流程的小demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "FE",
+    "BE"
+  ],
+  "author": "wang",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "request": "^2.81.0",
+    "swig": "^1.4.2"
+  }
+}

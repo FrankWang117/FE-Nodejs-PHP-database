@@ -6,17 +6,17 @@ include('DB.php');
 //实例化类
 $dataBase = new DB;
 //接收node（app.js）中路由（/index/add）参数
-$atotalnum=$_GET["allfeNum"];
-$aincreasenum=$_GET["allfeAdd"];
-$btotalnum=$_GET["readyNum"];
-$bincreasenum=$_GET["readyAdd"];
-$ctotalnum=$_GET["zeroNum"];
-$cincreasenum=$_GET["zeroAdd"];
+$atotalnum=$_GET["mathNum"];
+$aincreasenum=$_GET["mathAdd"];
+$btotalnum=$_GET["engNum"];
+$bincreasenum=$_GET["engAdd"];
+$ctotalnum=$_GET["ccNum"];
+$cincreasenum=$_GET["ccAdd"];
 $dtotalnum=$_GET["freeNum"];
 $dincreasenum=$_GET["freeAdd"];
 
 //定义查询sql语句:查询数据表的所有字段，插入到数据库中
-$result = $dataBase->runQuery("INSERT INTO Numdata (atotalnum,aincreasenum,btotalnum,bincreasenum,ctotalnum,cincreasenum,dtotalnum,dincreasenum)VALUES ('$atotalnum','$aincreasenum','$btotalnum','$bincreasenum','$ctotalnum','$cincreasenum','$dtotalnum','$dincreasenum')");
+$result = $dataBase->runQuery("INSERT INTO classData (atotalnum,aincreasenum,btotalnum,bincreasenum,ctotalnum,cincreasenum,dtotalnum,dincreasenum)VALUES ('$atotalnum','$aincreasenum','$btotalnum','$bincreasenum','$ctotalnum','$cincreasenum','$dtotalnum','$dincreasenum')");
 
 // include('city.php');
 // if ($result > 1) {

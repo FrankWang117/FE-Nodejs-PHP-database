@@ -9,7 +9,7 @@ class DB
 	/*** mysql password ***/
 	private $password = ''; // Put Your MySQL Password here
 	/*** mysql database ***/
-	private $dbName   = 'forPHPtoFE'; // Put Your MySQL Database name here
+	private $dbName   = 'forfetobe'; // Put Your MySQL Database name here
 	/*** database resource ***/
 	public $dbh = NULL; // Database handler
 	//默认构造函数
