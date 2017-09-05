@@ -64,7 +64,7 @@ app.get('/index/added', function(req, res) {
 		"freeNum=" + req.query.freeNum + '&' +
 		"freeAdd=" + req.query.freeAdd;
 
-	request('http://localhost/ydclass/city.php?' + responseData, function(error, response, body) {
+	request('http://localhost/ydclass/send.php?' + responseData, function(error, response, body) {
 		// res.send(responseData);
 		res.json(body);
 	});
