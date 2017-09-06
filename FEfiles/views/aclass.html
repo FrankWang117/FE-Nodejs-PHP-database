@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A-课程人数统计</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/King_128px.ico" type="image/x-ico">
+    <!-- bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.0.0/css/bootstrap.css" rel="stylesheet">
+    <link href="css/overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/elements.css">
+    <link rel="stylesheet" type="text/css" href="css/icons.css">
+
+    <!-- libraries -->
+   <link href="https://cdn.bootcss.com/jquery-ui-bootstrap/0.5pre/css/custom-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- <link href="css/morris.css" type="text/css" rel="stylesheet" /> -->
+
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="css/tabledata.css" type="text/css" media="screen" />
+
+    <!-- open sans font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!-- navbar -->
+    <header class="navbar navbar-inverse" role="banner">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" id="menu-toggler">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://localhost:3000/showing"><img src="img/logo.png"></a>
+        </div>
+        <ul class="nav navbar-nav pull-right hidden-xs">
+            <li class="hidden-xs hidden-sm">
+                <input class="search" type="text" />
+            </li>
+            <li class="dropdown">
+                <a href="" class="dropdown-toggle hidden-xs hidden-sm" data-toggle="dropdown">
+                    个人账户
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">个人信息</a></li>
+                    <li><a href="#">吧拉</a></li>
+                    <li><a href="#">巴拉</a></li>
+                    <li><a href="#">巴拉</a></li>
+                    <li><a href="#">巴拉</a></li>
+                </ul>
+            </li>
+            <li class="settings hidden-xs hidden-sm">
+                <a href="#" role="button">
+                    <i class="icon-cog"></i>
+                </a>
+            </li>
+            <li class="settings hidden-xs hidden-sm">
+                <a href="http://localhost:3000/signin" role="button">
+                    <i class="icon-share-alt"></i>
+                </a>
+            </li>
+        </ul>
+    </header>
+    <!-- end navbar -->
+
+    <!-- sidebar -->
+    <div id="sidebar-nav">
+        <ul id="dashboard-menu">
+            <li>
+                <a href="http://localhost:3000/showing">
+                    <i class="icon-home"></i>
+                    <span>首页</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="http://localhost:3000/aClassData"">
+                    <div class="pointer">
+                        <div class="arrow"></div>
+                        <div class="arrow_border"></div>
+                    </div>
+                    <i class="icon-signal"></i>
+                    <span>课程a</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:3000/bClassData">
+                    <i class="icon-signal"></i>
+                    <span>课程b</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:3000/cClassData">
+                    <i class="icon-signal"></i>
+                    <span>课程c</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:3000/dClassData">
+                    <i class="icon-signal"></i>
+                    <span>课程d</span>
+                </a>
+            </li>
+
+
+            <li>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-share-alt"></i>
+                    <span>其他</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="http://localhost:3000/signin">登录</a></li>
+                    <li><a href="http://localhost:3000/signup">注册</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- end sidebar -->
+
+
+	<!-- main container -->
+    <div class="content">
+
+        <!-- settings changer -->
+        <div class="skins-nav">
+            <a href="#" class="skin first_nav selected">
+                <span class="icon"></span><span class="text">默认皮肤</span>
+            </a>
+            <a href="#" class="skin second_nav" data-file="css/skins/dark.css">
+                <span class="icon"></span><span class="text">深色皮肤</span>
+            </a>
+        </div>
+
+        <div id="pad-wrapper">
+            <!-- morris stacked chart -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="title">A-课程数据展示</h4>
+                </div>
+                <div class="col-md-12">
+                    <h5>课程参与人数变动信息</h5>
+                    <br>
+                    <div id="firstclass"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end main container -->
+
+
+	<!-- scripts for this page -->
+   <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-ui-bootstrap/0.5pre/assets/js/jquery-ui-1.10.0.custom.min.js"></script>
+    <!-- knob -->
+     <script src="https://cdn.bootcss.com/jQuery-Knob/1.2.13/jquery.knob.min.js"></script>
+    <!-- morrisjs -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <!-- call all plugins -->
+    <script src="scripts/theme.js"></script>
+    <script src="https://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="scripts/aclassdata.js"></script>
+
+    <!-- build the charts -->
+<!--     <script type="text/javascript">
+             $('#firstclass').highcharts({
+        chart: {
+          type: 'line'
+        },
+        title: {
+          text: '近七日学员变动'
+        },
+        subtitle: {
+          text: '数据来源: ketang.com'
+        },
+        xAxis: {
+          categories: ['前六天', '前五天', '前四天', '前三天', '前天', '昨天', '今天']
+        },
+        yAxis: {
+          title: {
+            text: '人数'
+          }
+        },
+        plotOptions: {
+          line: {
+            dataLabels: {
+              enabled: true // 开启数据标签
+            },
+            enableMouseTracking: true // 关闭鼠标跟踪，对应的提示框、点击事件会失效
+          }
+        },
+        series: [{
+          name: '总人数',
+          data: [44, 55, 66, 66, 66, 66, 66]
+        }, {
+          name: '新增人数',
+          data: [4, 5, 5, 5, 4, 5, 5]
+        }]
+      });
+    </script> -->
+</body>
+</html>
