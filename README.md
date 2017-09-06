@@ -169,4 +169,9 @@ $(function() {
 	  //具体代码在Github上查看。
 })
 ```
-至此，一个完整的将前端数据通过ajax的get方式发送到Nodejs中，在经由php发送到数据库中，然后再从数据库中拿取最新的数据，展示到界面中。
+至此，一个完整的将前端数据通过ajax的get方式发送到Nodejs中，在经由php发送到数据库中，然后再从数据库中拿取最新的数据，展示到界面中。  
+整个的展示流程为：  
+1. 进入添加数据界面：
+![进入增加数据界面](http://img.blog.csdn.net/20170906224615602?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcGVuZ185/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)  
+2. 添加数据：![填写数据点击按钮](http://img.blog.csdn.net/20170906224700711?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcGVuZ185/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)  
+3. 在展示界面查看：![查看各个课程数据](http://img.blog.csdn.net/20170906224728882?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcGVuZ185/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
