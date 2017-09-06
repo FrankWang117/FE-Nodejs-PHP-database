@@ -1,41 +1,35 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>一灯腾讯课堂后台管理系统首页</title>
-	<meta name="keywords" content="一灯腾讯课堂" />
-	<meta name="description" content="一灯 腾讯课堂" />
+    <title>课堂报名后台管理系统首页</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/King_128px.ico" type="image/x-ico">
     <!-- bootstrap -->
     <link href="https://cdn.bootcss.com/bootstrap/3.0.0/css/bootstrap.css" rel="stylesheet">
     <link href="css/overrides.css" type="text/css" rel="stylesheet" />
-
-
     <!-- libraries -->
     <link href="https://cdn.bootcss.com/jquery-ui-bootstrap/0.5pre/css/custom-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
-
     <!-- global styles -->
     <link rel="stylesheet" type="text/css" href="css/layout.css">
     <link rel="stylesheet" type="text/css" href="css/elements.css">
     <link rel="stylesheet" type="text/css" href="css/icons.css">
-
     <!-- this page specific styles -->
     <link rel="stylesheet" href="css/index.css" type="text/css" media="screen" />
-
     <!-- open sans font -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
     <!-- lato font -->
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
+
 <body>
     <!-- navbar -->
     <header class="navbar navbar-inverse" role="banner">
@@ -52,7 +46,6 @@
             <li class="hidden-xs hidden-sm">
                 <input class="search" type="text" />
             </li>
-
             <li class="dropdown">
                 <a href="" class="dropdown-toggle hidden-xs hidden-sm" data-toggle="dropdown">
                     你的账号
@@ -79,7 +72,6 @@
         </ul>
     </header>
     <!-- end navbar -->
-
     <!-- sidebar -->
     <div id="sidebar-nav">
         <ul id="dashboard-menu">
@@ -117,7 +109,6 @@
                     <span>课程d</span>
                 </a>
             </li>
-
             <li>
                 <a class="dropdown-toggle" href="#">
                     <i class="icon-share-alt"></i>
@@ -132,10 +123,8 @@
         </ul>
     </div>
     <!-- end sidebar -->
-
-	<!-- main container -->
+    <!-- main container -->
     <div class="content">
-
         <!-- settings changer -->
         <div class="skins-nav">
             <a href="#" class="skin first_nav selected">
@@ -145,207 +134,65 @@
                 <span class="icon"></span><span class="text">深色皮肤</span>
             </a>
         </div>
-
         <!-- upper main stats -->
         <div id="main-stats">
             <div class="row stats-row">
                 <div class="col-md-3 col-sm-3 stat">
                     <div class="data">
-                        <span class="number">2457</span>
-                        访问
+                        <span class="number">2457</span> 访问
                     </div>
                     <span class="date">今天</span>
                 </div>
                 <div class="col-md-3 col-sm-3 stat">
                     <div class="data">
-                        <span class="number">3240</span>
-                        总学生
+                        <span id="studentsnum" class="number">3240</span> 总学生
                     </div>
                     <span class="date">2017年09月</span>
                 </div>
                 <div class="col-md-3 col-sm-3 stat">
                     <div class="data">
-                        <span class="number">322</span>
-                        新学生
+                        <span id="newstudents" class="number">322</span> 新学生
                     </div>
-                    <span class="date">本月</span>
+                    <span class="date">近七日</span>
                 </div>
                 <div class="col-md-3 col-sm-3 stat last">
                     <div class="data">
-                        <span class="number">￥2,340k</span>
-                        金额
+                        <span id="allmoney" class="number">￥2,340k</span> 收入
                     </div>
-                    <span class="date">最近30天</span>
+                    <span class="date">近七日</span>
                 </div>
             </div>
         </div>
         <!-- end upper main stats -->
-
         <div id="pad-wrapper">
-
             <!-- statistics chart built with jQuery Flot -->
             <div class="row chart">
                 <div class="col-md-12">
                     <h4 class="clearfix">
-                        Statistics
-                         <div class="btn-group pull-right">
-                            <button class="glow left">日</button>
-                            <button class="glow middle active">月</button>
-                            <button class="glow right">年</button>
-                        </div>
+                        全部课程学员变化情况
                     </h4>
                 </div>
                 <div class="col-md-12">
                     <div id="statsChart"></div>
                 </div>
             </div>
-            <!-- end statistics chart -->
-
-            <!-- UI Elements section -->
-            <div class="row section ui-elements">
-                <div class="col-md-12">
-                    <h4>UI Elements</h4>
-                </div>
-                <div class="col-md-5 knobs">
-                    <div class="knob-wrapper">
-                        <input type="text" value="50" class="knob" data-thickness=".3" data-inputColor="#333" data-fgColor="#30a1ec" data-bgColor="#d4ecfd" data-width="150">
-                        <div class="info">
-                            <div class="param">
-                                <span class="line blue"></span>
-                                Active users
-                            </div>
-                        </div>
-                    </div>
-                    <div class="knob-wrapper">
-                        <input type="text" value="75" class="knob second" data-thickness=".3" data-inputColor="#333" data-fgColor="#3d88ba" data-bgColor="#d4ecfd" data-width="150">
-                        <div class="info">
-                            <div class="param">
-                                <span class="line blue"></span>
-                                % disk space usage
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 showcase">
-                    <div class="ui-sliders">
-                        <div class="slider slider-sample1 vertical-handler"></div>
-                        <div class="slider slider-sample2"></div>
-                        <div class="slider slider-sample3"></div>
-                    </div>
-                    <div class="ui-group">
-                        <a class="btn-flat inverse">Large Button</a>
-                        <a class="btn-flat gray">Large Button</a>
-                        <a class="btn-flat default">Large Button</a>
-                        <a class="btn-flat primary">Large Button</a>
-                    </div>
-
-                    <div class="ui-group">
-                        <a class="btn-flat icon">
-                            <i class="tool"></i> Icon button
-                        </a>
-                        <a class="btn-glow small inverse">
-                            <i class="shuffle"></i>
-                        </a>
-                        <a class="btn-glow small primary">
-                            <i class="setting"></i>
-                        </a>
-                        <a class="btn-glow small default">
-                            <i class="attach"></i>
-                        </a>
-                        <div class="ui-select">
-                            <select>
-                                <option selected>Dropdown</option>
-                                <option>Custom selects</option>
-                                <option>Pure css styles</option>
-                            </select>
-                        </div>
-
-                        <div class="btn-group">
-                            <button class="glow left">LEFT</button>
-                            <button class="glow right">RIGHT</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end UI elements section -->
-
-            <!-- table sample -->
-            <!-- end table sample -->
         </div>
     </div>
-
-
-	<!-- scripts -->
-   <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <!-- scripts -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery-ui-bootstrap/0.5pre/assets/js/jquery-ui-1.10.0.custom.min.js"></script>
     <!-- knob -->
     <script src="https://cdn.bootcss.com/jQuery-Knob/1.2.13/jquery.knob.min.js"></script>
     <script src="scripts/theme.js"></script>
-
+    <script src="https://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="scripts/alldata.js"></script>
     <script type="text/javascript">
-        $(function () {
-            // jQuery Knobs
-            $(".knob").knob();
-
-            // jQuery UI Sliders
-            $(".slider-sample1").slider({
-                value: 100,
-                min: 1,
-                max: 500
-            });
-            $(".slider-sample2").slider({
-                range: "min",
-                value: 130,
-                min: 1,
-                max: 500
-            });
-            $(".slider-sample3").slider({
-                range: true,
-                min: 0,
-                max: 500,
-                values: [ 40, 170 ],
-            });
-
-
-
-
-            function showTooltip(x, y, contents) {
-                $('<div id="tooltip">' + contents + '</div>').css( {
-                    position: 'absolute',
-                    display: 'none',
-                    top: y - 30,
-                    left: x - 50,
-                    color: "#fff",
-                    padding: '2px 5px',
-                    'border-radius': '6px',
-                    'background-color': '#000',
-                    opacity: 0.80
-                }).appendTo("body").fadeIn(200);
-            }
-
-            var previousPoint = null;
-            $("#statsChart").bind("plothover", function (event, pos, item) {
-                if (item) {
-                    if (previousPoint != item.dataIndex) {
-                        previousPoint = item.dataIndex;
-
-                        $("#tooltip").remove();
-                        var x = item.datapoint[0].toFixed(0),
-                            y = item.datapoint[1].toFixed(0);
-
-                        var month = item.series.xaxis.ticks[item.dataIndex].label;
-
-                        showTooltip(item.pageX, item.pageY,
-                                    item.series.label + " of " + month + ": " + y);
-                    }
-                }
-                else {
-                    $("#tooltip").remove();
-                    previousPoint = null;
-                }
-            });
-        });
+    $(function() {
+        // jQuery Knobs
+        $(".knob").knob();
+    });
     </script>
 </body>
+
 </html>
