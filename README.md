@@ -171,7 +171,14 @@ $(function() {
 ```
 至此，一个完整的将前端数据通过ajax的get方式发送到Nodejs中，在经由php发送到数据库中，然后再从数据库中拿取最新的数据，展示到界面中。  
 整个的展示流程为：  
-1. 进入添加数据界面：
-![进入增加数据界面](http://img.blog.csdn.net/20170906224615602?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcGVuZ185/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)  
-2. 添加数据：![填写数据点击按钮](http://img.blog.csdn.net/20170906224700711?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcGVuZ185/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)  
-3. 在展示界面查看：![查看各个课程数据](http://img.blog.csdn.net/20170906224728882?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcGVuZ185/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+1. **进入登录界面**：
+	其中输入错误的密码或未注册的用户名均会得到提示：
+![登录界面](http://ww4.sinaimg.cn/large/a15b4afegy1fjb98vxotog20qo0eg4qw)  
+2. **查看展示界面**：  
+	查看展示界面，没门课程均有单独的展示界面 以及相应的数据。且是响应式，适合在手机端浏览。还可以在左侧的功能栏找到添加数据接口。
+![查看展示界面](http://ww4.sinaimg.cn/large/a15b4afegy1fjb95heoccg20qo0egb2f)  
+3. **添加数据**：
+	添加成功后点击确认 添加按钮，即可在展示界面查看最新数据。
+![添加数据](http://ww4.sinaimg.cn/large/a15b4afegy1fjb92vecdng20qo0eg1ky)  
+### 整个的流程就是：  
+![全部流程](http://ww4.sinaimg.cn/large/a15b4afegy1fjb9hetwm8g20qo0egqvl)
