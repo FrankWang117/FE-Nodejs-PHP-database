@@ -173,12 +173,12 @@ $(function() {
 整个的展示流程为：  
 1. **进入登录界面**：
 	其中输入错误的密码或未注册的用户名均会得到提示：
-![登录界面](http://ww4.sinaimg.cn/large/a15b4afegy1fjb98vxotog20qo0eg4qw)  
+![登录界面](http://ow3n2dxwg.bkt.clouddn.com/image/fetobe01.gif)  
 2. **查看展示界面**：  
 	查看展示界面，没门课程均有单独的展示界面 以及相应的数据。且是响应式，适合在手机端浏览。还可以在左侧的功能栏找到添加数据接口。
-![查看展示界面](http://ww4.sinaimg.cn/large/a15b4afegy1fjb95heoccg20qo0egb2f)  
+![查看展示界面](http://ow3n2dxwg.bkt.clouddn.com/image/fetobe02.gif)  
 3. **添加数据**：
 	添加成功后点击确认 添加按钮，即可在展示界面查看最新数据。
 ![添加数据](http://ww4.sinaimg.cn/large/a15b4afegy1fjb92vecdng20qo0eg1ky)  
 ### 整个的流程就是：  
-![全部流程](http://ww4.sinaimg.cn/large/a15b4afegy1fjb9hetwm8g20qo0egqvl)
+![全部流程](http://ow3n2dxwg.bkt.clouddn.com/%E6%95%B4%E4%B8%AA%E6%B5%81%E7%A8%8B.gif)
